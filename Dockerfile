@@ -15,4 +15,4 @@ COPY *.py ./
 RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
 USER appuser
 
-ENTRYPOINT ["python", "main.py"]
+CMD python main.py "postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT:-5432}/${DB_NAME}" --interval "${POLL_INTERVAL:-60}"
