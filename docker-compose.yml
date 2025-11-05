@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  checklist-analyzer:
+    build: .
+    container_name: checklist_analyzer
+    restart: unless-stopped
+    
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT:-5432}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - POLL_INTERVAL=${POLL_INTERVAL:-60}
+    
+    command: >
+      postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT:-5432}/${DB_NAME}
+      --interval ${POLL_INTERVAL:-60}
+    
+    volumes:
+      - ./logs:/app/logs

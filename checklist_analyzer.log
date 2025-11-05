@@ -1,0 +1,170 @@
+2025-11-04 02:04:12,300 - __main__ - DEBUG - Включен DEBUG режим
+2025-11-04 02:04:12,301 - __main__ - INFO - ============================================================
+2025-11-04 02:04:12,301 - __main__ - INFO - AI Checklist Analyzer Service
+2025-11-04 02:04:12,302 - __main__ - INFO - ============================================================
+2025-11-04 02:04:12,302 - __main__ - INFO - Connection string: postgresql://user:pass@host/new_air_inc_db
+2025-11-04 02:04:12,302 - __main__ - INFO - Poll interval: 60 секунд
+2025-11-04 02:04:12,302 - __main__ - INFO - Mode: постоянный мониторинг
+2025-11-04 02:04:12,302 - __main__ - INFO - ============================================================
+2025-11-04 02:04:12,302 - __main__ - INFO - Запуск в режиме постоянного мониторинга...
+2025-11-04 02:04:12,302 - service - INFO - Запуск сервиса мониторинга чеклистов
+2025-11-04 02:04:12,302 - service - INFO - Интервал проверки: 60 секунд
+2025-11-04 02:04:12,302 - service - INFO - ============================================================
+2025-11-04 02:04:12,302 - service - INFO - Начало цикла проверки
+2025-11-04 02:04:12,302 - database - INFO - Подключение к БД: user@host:5432/new_air_inc_db
+2025-11-04 02:04:14,988 - database - ERROR - Ошибка подключения к БД: could not translate host name "host" to address: No such host is known. 
+
+2025-11-04 02:04:14,988 - service - ERROR - Критическая ошибка в цикле проверки: could not translate host name "host" to address: No such host is known. 
+Traceback (most recent call last):
+  File "C:\Users\User\Downloads\SecureTech\airplane_crashes\auto_summarize\service.py", line 82, in run_cycle
+    with DatabaseConnection(self.connection_string) as cursor:
+  File "C:\Users\User\Downloads\SecureTech\airplane_crashes\auto_summarize\database.py", line 41, in __enter__
+    self.conn = psycopg2.connect(**self.config)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python310\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "host" to address: No such host is known. 
+
+2025-11-04 02:04:15,005 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:04:42,951 - __main__ - INFO - Получен сигнал остановки (Ctrl+C)
+2025-11-04 02:05:06,230 - __main__ - DEBUG - Включен DEBUG режим
+2025-11-04 02:05:06,230 - __main__ - INFO - ============================================================
+2025-11-04 02:05:06,230 - __main__ - INFO - AI Checklist Analyzer Service
+2025-11-04 02:05:06,230 - __main__ - INFO - ============================================================
+2025-11-04 02:05:06,230 - __main__ - INFO - Connection string: postgresql://postgres:123456789@localhost/new_air_inc_db
+2025-11-04 02:05:06,230 - __main__ - INFO - Poll interval: 60 секунд
+2025-11-04 02:05:06,230 - __main__ - INFO - Mode: постоянный мониторинг
+2025-11-04 02:05:06,230 - __main__ - INFO - ============================================================
+2025-11-04 02:05:06,230 - __main__ - INFO - Запуск в режиме постоянного мониторинга...
+2025-11-04 02:05:06,230 - service - INFO - Запуск сервиса мониторинга чеклистов
+2025-11-04 02:05:06,230 - service - INFO - Интервал проверки: 60 секунд
+2025-11-04 02:05:06,230 - service - INFO - ============================================================
+2025-11-04 02:05:06,230 - service - INFO - Начало цикла проверки
+2025-11-04 02:05:06,230 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:05:06,308 - service - INFO - Нет чеклистов для обработки
+2025-11-04 02:05:06,309 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:06:06,312 - service - INFO - ============================================================
+2025-11-04 02:06:06,312 - service - INFO - Начало цикла проверки
+2025-11-04 02:06:06,313 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:06:06,370 - service - INFO - Нет чеклистов для обработки
+2025-11-04 02:06:06,370 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:07:06,383 - service - INFO - ============================================================
+2025-11-04 02:07:06,383 - service - INFO - Начало цикла проверки
+2025-11-04 02:07:06,384 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:07:06,489 - service - INFO - Нет чеклистов для обработки
+2025-11-04 02:07:06,490 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:08:06,492 - service - INFO - ============================================================
+2025-11-04 02:08:06,492 - service - INFO - Начало цикла проверки
+2025-11-04 02:08:06,493 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:08:06,549 - service - INFO - Нет чеклистов для обработки
+2025-11-04 02:08:06,549 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:09:06,552 - service - INFO - ============================================================
+2025-11-04 02:09:06,552 - service - INFO - Начало цикла проверки
+2025-11-04 02:09:06,552 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:09:06,608 - service - INFO - Нет чеклистов для обработки
+2025-11-04 02:09:06,609 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:10:06,623 - service - INFO - ============================================================
+2025-11-04 02:10:06,623 - service - INFO - Начало цикла проверки
+2025-11-04 02:10:06,623 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:10:06,676 - scanner - INFO - Найдено 1 записей в m_checklist_ap
+2025-11-04 02:10:06,679 - service - INFO - Найдено 1 чеклистов для обработки
+2025-11-04 02:10:06,679 - service - INFO - Обработка чеклиста 20000000016 (ap), акт 20000000016
+2025-11-04 02:10:06,697 - collector - INFO - Собрано 3 записей для чеклиста 20000000016
+2025-11-04 02:10:07,092 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-4bda7b62-5360-4439-9065-bf1a610abd4b', 'json_data': {'messages': [{'role': 'user', 'content': '\nТы эксперт по авиационной безопасности, проверяющий авиакомпании.\nИспользуй следующие расшифровки:\n\n\nГА - гражданская авиация;\nСАБ - служба авиационной безопасности;\nАБ - авиационная безопасность;\nУВД - управление воздушным движением;\nГСМ – горючесмазочный материал;\nВС - воздушное судно;\nКПП - контрольно-пропускной пункт;\nЧС - чрезвычайная ситуация;\nVIP-зал - зал для особо важных персон;\nВВ - взрывчатые вещества;\nКВС - командир воздушного судна;\nИАС - инженерно-авиационная служба;\n\n\nУровни соответствия / несоответствия:\n\n(1) - несоответствие критическое, представляющее угрозу авиационной безопасности и препятствующее дальнейшей деятельности;\n(2) - несоответствие, не препятствующее дальнейшей деятельности, при условии устранения в согласованные сроки или введении ограничений;\n(3) - несоответствие, подлежащее устранению при совершенствовании производства и системы качества;\n(*) - не обязательно для данной организации;\n(+) - отвечает требованиям;\n(NA) - не применимо, меры или процедуры не применяются или не используются в организации ГА;\n(NC) - не подтверждено, меры или процедуры, в отношении которых инспекторы не смогли установить соответствие требованиям нормативных правовых актов.\n\n\nВот результаты конкретной проверки (чеклист):\n\n- Категория: Программа АБ, согласованная с уполномоченной организацией в сфере ГА, межведомственной аэропортовой комиссией по АБ и утвержденная первым руководителем аэропорта (код 27626), Оценка: 2\n- Категория: Программа подготовки и переподготовки по АБ, согласованная с уполномоченной организацией в сфере ГА и утвержденная первым руководителем аэропорта (код 27627), Оценка: 1\n- Категория: Техническое, производственное и финансовое обеспечение (код 27628), Оценка: -2\n\nТвоя задача:\n1. Дай конкретные рекомендации по устранению несоответствий для этой проверки.\n2. Проанализируй тенденции по выявленным позициям (если они повторяются или связаны).\n3. Составь сводный вывод о состоянии авиационной безопасности объекта по разделам.\n\nВАЖНО: Форматируй ответ БЕЗ markdown разметки. Используй только обычный текст, разделенный на параграфы. \nНе используй символы *, #, **, _, и другие markdown элементы. \nСтруктурируй текст через переносы строк и отступы.\n'}], 'model': 'gpt-4o-mini', 'max_tokens': 10000, 'temperature': 0.2}}
+2025-11-04 02:10:07,118 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-11-04 02:10:07,119 - httpcore.connection - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-11-04 02:10:07,149 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000021BFDF6E5C0>
+2025-11-04 02:10:07,149 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000021BFC5F9040> server_hostname='api.openai.com' timeout=5.0
+2025-11-04 02:10:07,181 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000021BFDF6E590>
+2025-11-04 02:10:07,181 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-11-04 02:10:07,182 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-11-04 02:10:07,182 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-11-04 02:10:07,182 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-11-04 02:10:07,182 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-11-04 02:10:17,164 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 04 Nov 2025 01:10:18 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'ais-nwawxb'), (b'openai-processing-ms', b'8953'), (b'openai-project', b'proj_fyEMAl4EJGlNtzbw2pVdlYn8'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'9202'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199010'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'297ms'), (b'x-request-id', b'req_9f055038b7f1489388775088b3b0044a'), (b'x-openai-proxy-wasm', b'v0.1'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=q6RFOl1e7u2h2oC7GwOZZJPsQ8thflfk2OAOAPIqgmo-1762218618-1.0.1.1-3rNvjKfa_njNcMja_WY2rsoIPEZwtSgp3h0c0Qt1P_izWTP4.cRBS6yWLy98Y1.Ncr3Z7TBGcNqPgPRTbFXNSEaExB2BIRzgAof4UK4UNkw; path=/; expires=Tue, 04-Nov-25 01:40:18 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=_yAttXpO5k0TfbYOdkRdKjnVOalhPuoEpKvxjA8DUCM-1762218618000-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'99903adc2b84124d-TXL'), (b'Content-Encoding', b'br'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-04 02:10:17,165 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-04 02:10:17,166 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-11-04 02:10:17,219 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-11-04 02:10:17,219 - httpcore.http11 - DEBUG - response_closed.started
+2025-11-04 02:10:17,219 - httpcore.http11 - DEBUG - response_closed.complete
+2025-11-04 02:10:17,220 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Tue, 04 Nov 2025 01:10:18 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'ais-nwawxb'), ('openai-processing-ms', '8953'), ('openai-project', 'proj_fyEMAl4EJGlNtzbw2pVdlYn8'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '9202'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199010'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '297ms'), ('x-request-id', 'req_9f055038b7f1489388775088b3b0044a'), ('x-openai-proxy-wasm', 'v0.1'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=q6RFOl1e7u2h2oC7GwOZZJPsQ8thflfk2OAOAPIqgmo-1762218618-1.0.1.1-3rNvjKfa_njNcMja_WY2rsoIPEZwtSgp3h0c0Qt1P_izWTP4.cRBS6yWLy98Y1.Ncr3Z7TBGcNqPgPRTbFXNSEaExB2BIRzgAof4UK4UNkw; path=/; expires=Tue, 04-Nov-25 01:40:18 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=_yAttXpO5k0TfbYOdkRdKjnVOalhPuoEpKvxjA8DUCM-1762218618000-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '99903adc2b84124d-TXL'), ('content-encoding', 'br'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-11-04 02:10:17,220 - openai._base_client - DEBUG - request_id: req_9f055038b7f1489388775088b3b0044a
+2025-11-04 02:10:17,226 - ai_analyzer - INFO - Анализ успешно получен от ИИ
+2025-11-04 02:10:17,227 - updater - INFO - Акт 20000000016 успешно обновлен
+2025-11-04 02:10:17,228 - service - INFO - Чеклист 20000000016 успешно обработан
+2025-11-04 02:10:17,229 - service - INFO - Успешно обработано: 1/1
+2025-11-04 02:10:17,230 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:11:17,244 - service - INFO - ============================================================
+2025-11-04 02:11:17,244 - service - INFO - Начало цикла проверки
+2025-11-04 02:11:17,244 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:11:17,305 - scanner - INFO - Найдено 1 записей в m_checklist_ap
+2025-11-04 02:11:17,309 - service - INFO - Найдено 1 чеклистов для обработки
+2025-11-04 02:11:17,310 - service - INFO - Обработка чеклиста 20000000016 (ap), акт 20000000016
+2025-11-04 02:11:17,315 - service - INFO - Чеклист 20000000016 не изменился, пропускаем
+2025-11-04 02:11:17,315 - service - INFO - Успешно обработано: 1/1
+2025-11-04 02:11:17,315 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:12:17,316 - service - INFO - ============================================================
+2025-11-04 02:12:17,316 - service - INFO - Начало цикла проверки
+2025-11-04 02:12:17,316 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:12:17,373 - scanner - INFO - Найдено 1 записей в m_checklist_ap
+2025-11-04 02:12:17,376 - service - INFO - Найдено 1 чеклистов для обработки
+2025-11-04 02:12:17,376 - service - INFO - Обработка чеклиста 20000000016 (ap), акт 20000000016
+2025-11-04 02:12:17,380 - service - INFO - Чеклист 20000000016 не изменился, пропускаем
+2025-11-04 02:12:17,382 - service - INFO - Успешно обработано: 1/1
+2025-11-04 02:12:17,382 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:13:17,390 - service - INFO - ============================================================
+2025-11-04 02:13:17,390 - service - INFO - Начало цикла проверки
+2025-11-04 02:13:17,390 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:13:17,456 - scanner - INFO - Найдено 1 записей в m_checklist_ap
+2025-11-04 02:13:17,460 - service - INFO - Найдено 1 чеклистов для обработки
+2025-11-04 02:13:17,460 - service - INFO - Обработка чеклиста 20000000016 (ap), акт 20000000016
+2025-11-04 02:13:17,465 - service - INFO - Чеклист 20000000016 не изменился, пропускаем
+2025-11-04 02:13:17,465 - service - INFO - Успешно обработано: 1/1
+2025-11-04 02:13:17,466 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:14:17,471 - service - INFO - ============================================================
+2025-11-04 02:14:17,471 - service - INFO - Начало цикла проверки
+2025-11-04 02:14:17,471 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:14:17,529 - scanner - INFO - Найдено 1 записей в m_checklist_ap
+2025-11-04 02:14:17,533 - service - INFO - Найдено 1 чеклистов для обработки
+2025-11-04 02:14:17,533 - service - INFO - Обработка чеклиста 20000000016 (ap), акт 20000000016
+2025-11-04 02:14:17,537 - service - INFO - Чеклист 20000000016 не изменился, пропускаем
+2025-11-04 02:14:17,537 - service - INFO - Успешно обработано: 1/1
+2025-11-04 02:14:17,537 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:15:17,551 - service - INFO - ============================================================
+2025-11-04 02:15:17,552 - service - INFO - Начало цикла проверки
+2025-11-04 02:15:17,552 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:15:17,606 - scanner - INFO - Найдено 1 записей в m_checklist_ap
+2025-11-04 02:15:17,610 - service - INFO - Найдено 1 чеклистов для обработки
+2025-11-04 02:15:17,610 - service - INFO - Обработка чеклиста 20000000016 (ap), акт 20000000016
+2025-11-04 02:15:17,612 - service - INFO - Чеклист 20000000016 не изменился, пропускаем
+2025-11-04 02:15:17,613 - service - INFO - Успешно обработано: 1/1
+2025-11-04 02:15:17,613 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:16:17,617 - service - INFO - ============================================================
+2025-11-04 02:16:17,617 - service - INFO - Начало цикла проверки
+2025-11-04 02:16:17,617 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:16:17,674 - scanner - INFO - Найдено 1 записей в m_checklist_ap
+2025-11-04 02:16:17,677 - service - INFO - Найдено 1 чеклистов для обработки
+2025-11-04 02:16:17,677 - service - INFO - Обработка чеклиста 20000000016 (ap), акт 20000000016
+2025-11-04 02:16:17,680 - service - INFO - Чеклист 20000000016 не изменился, пропускаем
+2025-11-04 02:16:17,680 - service - INFO - Успешно обработано: 1/1
+2025-11-04 02:16:17,680 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:17:17,682 - service - INFO - ============================================================
+2025-11-04 02:17:17,683 - service - INFO - Начало цикла проверки
+2025-11-04 02:17:17,683 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:17:17,736 - scanner - INFO - Найдено 1 записей в m_checklist_ap
+2025-11-04 02:17:17,738 - service - INFO - Найдено 1 чеклистов для обработки
+2025-11-04 02:17:17,738 - service - INFO - Обработка чеклиста 20000000016 (ap), акт 20000000016
+2025-11-04 02:17:17,743 - service - INFO - Чеклист 20000000016 не изменился, пропускаем
+2025-11-04 02:17:17,743 - service - INFO - Успешно обработано: 1/1
+2025-11-04 02:17:17,744 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:18:17,746 - service - INFO - ============================================================
+2025-11-04 02:18:17,746 - service - INFO - Начало цикла проверки
+2025-11-04 02:18:17,747 - database - INFO - Подключение к БД: postgres@localhost:5432/new_air_inc_db
+2025-11-04 02:18:17,800 - scanner - INFO - Найдено 1 записей в m_checklist_ap
+2025-11-04 02:18:17,802 - service - INFO - Найдено 1 чеклистов для обработки
+2025-11-04 02:18:17,802 - service - INFO - Обработка чеклиста 20000000016 (ap), акт 20000000016
+2025-11-04 02:18:17,802 - service - INFO - Чеклист 20000000016 не изменился, пропускаем
+2025-11-04 02:18:17,802 - service - INFO - Успешно обработано: 1/1
+2025-11-04 02:18:17,808 - service - INFO - Ожидание 60 секунд до следующей проверки...
+2025-11-04 02:19:01,462 - __main__ - INFO - Получен сигнал остановки (Ctrl+C)
+2025-11-04 02:19:01,542 - httpcore.connection - DEBUG - close.started
+2025-11-04 02:19:01,544 - httpcore.connection - DEBUG - close.complete
